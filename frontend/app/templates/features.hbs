@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="page-header">FEATURES</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+
+
+
+      {{#link-to "features.new" class="btn"}}
+      create new feature
+      {{/link-to}}
+
+      <div style="height:20px"></div>
+
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Feature Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each model as |feature|}}
+          <tr>
+            <td>
+
+              {{#link-to "features.feature" feature}}
+            {{feature.name}}
+              {{/link-to}}
+            </td>
+          </tr>
+          {{/each}}
+
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+    <div class="col-sm-6">
+     {{outlet}}
+    </div>
+
+
+  </div>
+</div>

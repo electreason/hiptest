@@ -1,0 +1,8 @@
+<h2>Create new feature</h2>
+<form {{action 'createFeature' model on='submit'}}>
+  {{input type="text" value=model.name name=model.name}}
+
+
+  <input type="submit" value="Save">
+  <button {{action 'cancel'}}>Cancel</button>
+</form>
