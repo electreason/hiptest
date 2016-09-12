@@ -1,8 +1,11 @@
 <h2>Create new feature</h2>
-<form {{action 'createFeature' model on='submit'}}>
-  {{input type="text" value=model.name name=model.name}}
+<form {{action 'createFeature' model on='submit'}} class="form-inline">
+  <div class="form-group">
+    {{input type="text" value=model.name name=model.name class="form-control"}}
+  </div>
 
 
-  <input type="submit" value="Save">
-  <button {{action 'cancel'}}>Cancel</button>
+
+  <input type="submit" value="Save" class="btn ">
+
 </form>

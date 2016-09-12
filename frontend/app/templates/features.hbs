@@ -9,7 +9,7 @@
 
 
 
-      {{#link-to "features.new" class="btn"}}
+      {{#link-to "features.new" class="btn btn-info"}}
       create new feature
       {{/link-to}}
 
@@ -26,7 +26,7 @@
           <tr>
             <td>
 
-              {{#link-to "features.feature" feature}}
+              {{#link-to "features.feature" feature.id}}
             {{feature.name}}
               {{/link-to}}
             </td>

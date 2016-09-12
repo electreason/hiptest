@@ -1,7 +1,51 @@
-{{model.name}}
+<h3 class="page-header">{{model.name}}</h3>
+
+
+
+
+
+<div class="input-group">
+      {{input type="text" class="form-control" placeholder="New test" value=title}}
+      <span class="input-group-btn">
+        <button class="btn btn-info" {{action "createTest"}}>Add</button>
+      </span>
+    </div><!-- /input-group -->
+
 <br>
-{{model.tests}}
-<br>
-{{#each feature as |test|}}
-{{tests.name}}
-{{/each}}
+
+
+
+<table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Test name</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each model.tests as |test|}}
+          <tr>
+            <td>
+            {{test.name}}
+            </td>
+            <td>
+
+            <select onchange={{action "changeStatus" test.id}} >
+
+              <option value="undefined" selected="{{if test.isUndefined "selected" ""}}">undefined</option>
+
+              <option value="passed" selected="{{if test.isPassed "selected" ""}}">passed</option>
+
+              <option value="failed" selected="{{if test.isFailed "selected" ""}}">failed</option>
+
+
+            </select>
+
+            </td>
+          </tr>
+          {{/each}}
+
+
+        </tbody>
+      </table>
+
