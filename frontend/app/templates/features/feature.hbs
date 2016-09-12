@@ -5,9 +5,9 @@
 
 
 <div class="input-group">
-      {{input type="text" class="form-control" placeholder="New test" value=title}}
+      {{input type="text" class="form-control" placeholder="New test" value=testName}}
       <span class="input-group-btn">
-        <button class="btn btn-info" {{action "createTest"}}>Add</button>
+        <button class="btn btn-info" {{action "createTest" model.id}}>Add</button>
       </span>
     </div><!-- /input-group -->
 
